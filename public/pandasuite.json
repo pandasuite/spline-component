@@ -4,31 +4,15 @@
 
   "system": {
     "localization": false,
-    "actions": [
-      {
-        "id": "toMarker",
-        "name": "Change Image",
-        "locale_name": {
-          "fr_FR": "Change Image"
-        },
-        "params": [
-          { "id": "useless", "name": "Useless", "locale_name": {"fr_FR": "Inutile"}, "type": "Boolean" }
-        ]
-      }
-    ],
-    "events": [
-      {
-        "id": "triggerMarker",
-        "name": "Image",
-        "locale_name": {
-          "fr_FR": "Image"
-        }
-      }
-    ],
     "markers": [
       {
         "params": [
-          { "id": "src", "name": "Source", "locale_name": {"fr_FR": "Source"}, "type": "String" }
+          {
+            "id": "src",
+            "name": "Source",
+            "locale_name": { "fr_FR": "Source" },
+            "type": "String"
+          }
         ]
       }
     ]
@@ -36,59 +20,33 @@
 
   "properties": [
     {
-      "id": "searchTerm",
-      "name": "Search Term",
+      "id": "path",
+      "name": "File name",
       "locale_name": {
-        "fr_FR": "Terme de recherche"
+        "fr_FR": "Nom du fichier"
       },
       "type": "String",
-      "value": "panda"
+      "placeholder": "scene.splinecode",
+      "value": "scene.splinecode",
+      "bindable": true,
+      "required": true
     }
   ],
 
-  "events": [
-    {
-      "id": "imageChanged",
-      "name": "Image Changed",
-      "locale_name": {
-        "fr_FR": "Image Changée"
-      }
-    }
-  ],
+  "events": [],
 
-  "actions": [
-    {
-      "id": "changeColor",
-      "name": "Change Color",
-      "params": [
-        {
-          "id": "backgroundColor",
-          "name": "Background Color",
-          "locale_name": {
-            "fr_FR": "Couleur de fond"
-          },
-          "type": "String",
-          "value": "#FFFFFF"
-        }
-      ]
-    }
-  ],
-
-  "synchronization": [
-    {
-      "id": "synchroImages",
-      "name": "Synchronize images",
-      "locale_name": {
-        "fr_FR": "Synchroniser images"
-      }
-    }
-  ],
+  "actions": [],
 
   "resources": [
     {
-      "id": "my_image.png",
-      "type": "Image",
-      "localization": false
+      "id": "assets.zip",
+      "name": "Source",
+      "locale_name": {
+        "fr_FR": "Source"
+      },
+      "type": "Zip",
+      "localization": false,
+      "required": true
     }
   ]
 }

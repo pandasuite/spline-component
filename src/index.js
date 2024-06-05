@@ -1,12 +1,21 @@
 import PandaBridge from "pandasuite-bridge";
+import { Application } from "@splinetool/runtime";
 import "./index.css";
 
 let properties = null;
 let markers = null;
 
 function myInit() {
-  // const imageUrl = PandaBridge.resolvePath('my_image.png');
-  // PandaBridge.send('imageChanged');
+  const sceneUrl = `${PandaBridge.resolvePath("assets.zip", "./")}${
+    properties.path
+  }`;
+
+  const canvas = document.getElementById("canvas3d");
+  const spline = new Application(canvas);
+  spline.load(sceneUrl).then(() => {
+    console.log(spline.getAllObjects());
+    console.log(spline.getSplineEvents());
+  });
 }
 
 PandaBridge.init(() => {
