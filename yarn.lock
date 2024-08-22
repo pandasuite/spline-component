@@ -293,10 +293,10 @@
   resolved "https://registry.npmjs.org/@sindresorhus/merge-streams/-/merge-streams-2.3.0.tgz"
   integrity sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==
 
-"@splinetool/runtime@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@splinetool/runtime/-/runtime-1.5.0.tgz#d0cbbe6a394f78bf04373edde5dffb1a793ece12"
-  integrity sha512-r5Od2qsqX9XqmO9UChahB7iS8KAA/yk/LKv5ze1YHcHg3yxVXOLRSq9qyu+58w3tPnN/eGm2WgEg1gbCc/poXA==
+"@splinetool/runtime@^1.9.18":
+  version "1.9.18"
+  resolved "https://registry.yarnpkg.com/@splinetool/runtime/-/runtime-1.9.18.tgz#ad1a33b86516120d5d002049828680a566dbcb10"
+  integrity sha512-yi+mWgLmmzuWxWYcpS+FqnHCOlAnTS5vYyeB9slMUaN2OTmEaySP+5EfhVeERcPyvDj1ma8c36GlAn9oMZDWrQ==
   dependencies:
     on-change "^4.0.0"
     semver-compare "^1.0.0"
@@ -3631,9 +3631,14 @@ lodash.uniqby@^4.7.0:
   resolved "https://registry.npmjs.org/lodash.uniqby/-/lodash.uniqby-4.7.0.tgz"
   integrity sha512-e/zcLx6CSbmaEgFHCA7BnoQKyCtKMxnuWrJygbwPs/AIn+IMKl66L8/s+wBUn5LRw2pZx3bUHibiV1b6aTWIww==
 
-lodash@4.17.21, lodash@^4.17.14, lodash@^4.17.19, lodash@^4.17.21:
+lodash@4.17.21, lodash@^4.17.14, lodash@^4.17.19:
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
+lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 log-symbols@^4.1.0:

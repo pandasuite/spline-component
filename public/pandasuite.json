@@ -4,18 +4,76 @@
 
   "system": {
     "localization": false,
-    "markers": [
+    "actions": [
       {
+        "id": "toMarker",
+        "name": "Trigger event",
+        "locale_name": {
+          "fr_FR": "Déclencher l'événement"
+        },
         "params": [
           {
-            "id": "src",
-            "name": "Source",
-            "locale_name": { "fr_FR": "Source" },
-            "type": "String"
+            "id": "reverse",
+            "name": "Reverse order",
+            "locale_name": { "fr_FR": "Inverser l'ordre" },
+            "type": "Boolean",
+            "default": false
           }
         ]
       }
-    ]
+    ],
+    "events": [
+      {
+        "id": "triggerMarker",
+        "name": "Event",
+        "locale_name": {
+          "fr_FR": "Événement"
+        }
+      }
+    ],
+    "markers": [
+      {
+        "hideSystemId": true,
+        "params": [
+          {
+            "id": "uid",
+            "name": "UID",
+            "locale_name": { "fr_FR": "UID" },
+            "type": "String",
+            "disabled": true
+          },
+          {
+            "id": "name",
+            "name": "Object name",
+            "locale_name": { "fr_FR": "Nom de l'objet" },
+            "type": "String",
+            "disabled": true
+          },
+          {
+            "id": "event",
+            "name": "Event",
+            "locale_name": { "fr_FR": "Event" },
+            "type": "String",
+            "disabled": true
+          }
+        ]
+      }
+    ],
+    "defaults": {
+      "markers": {
+        "description": {
+          "value": "%s [%s]",
+          "args": [
+            {
+              "key": "name"
+            },
+            {
+              "key": "event"
+            }
+          ]
+        }
+      }
+    }
   },
 
   "properties": [
@@ -33,9 +91,63 @@
     }
   ],
 
-  "events": [],
+  "events": [
+    {
+      "id": "sceneLoaded",
+      "name": "Scene loaded",
+      "locale_name": {
+        "fr_FR": "Scène chargée"
+      }
+    },
+    {
+      "id": "sceneError",
+      "name": "Scene error",
+      "locale_name": {
+        "fr_FR": "Erreur de scène"
+      }
+    }
+  ],
 
-  "actions": [],
+  "actions": [
+    {
+      "id": "play",
+      "name": "Play",
+      "locale_name": {
+        "fr_FR": "Lecture"
+      }
+    },
+    {
+      "id": "stop",
+      "name": "Stop",
+      "locale_name": {
+        "fr_FR": "Arrêter"
+      }
+    }
+  ],
+
+  "synchronization": [
+    {
+      "id": "first",
+      "name": "First",
+      "locale_name": {
+        "fr_FR": "Première"
+      }
+    },
+    {
+      "id": "second",
+      "name": "Second",
+      "locale_name": {
+        "fr_FR": "Deuxième"
+      }
+    },
+    {
+      "id": "third",
+      "name": "Third",
+      "locale_name": {
+        "fr_FR": "Troisième"
+      }
+    }
+  ],
 
   "resources": [
     {

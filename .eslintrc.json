@@ -9,6 +9,8 @@
     "sourceType": "module"
   },
   "rules": {
-    "quotes": ["error", "double"]
+    "quotes": ["error", "double"],
+    "arrow-body-style": "off",
+    "no-plusplus": "off"
   }
 }
