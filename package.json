@@ -28,7 +28,7 @@
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
-    "@splinetool/runtime": "^1.9.18",
+    "@splinetool/runtime": "^1.9.23",
     "lodash": "^4.17.21",
     "pandasuite-bridge": "^4.5.3"
   },
