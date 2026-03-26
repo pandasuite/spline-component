@@ -1,7 +1,14 @@
 {
+  "meta": {
+    "stype": "spline",
+    "componentURL": "https://github.com/pandasuite/spline-component/",
+    "description": "Embeds interactive 3D scenes created with Spline, with playback control, event triggering, and variable binding.",
+    "locale_description": {
+      "fr_FR": "Intègre des scènes 3D interactives créées avec Spline, avec contrôle de lecture, déclenchement d'événements et liaison de variables."
+    }
+  },
   "version": "2.0.0",
   "main": "",
-
   "system": {
     "localization": false,
     "actions": [
@@ -15,11 +22,17 @@
           {
             "id": "reverse",
             "name": "Reverse order",
-            "locale_name": { "fr_FR": "Inverser l'ordre" },
+            "locale_name": {
+              "fr_FR": "Inverser l'ordre"
+            },
             "type": "Boolean",
             "default": false
           }
-        ]
+        ],
+        "description": "Trigger a specific Spline event by marker.",
+        "locale_description": {
+          "fr_FR": "Déclencher un événement Spline spécifique par marqueur."
+        }
       }
     ],
     "events": [
@@ -28,6 +41,10 @@
         "name": "Event",
         "locale_name": {
           "fr_FR": "Événement"
+        },
+        "description": "Fires when a Spline scene event is triggered.",
+        "locale_description": {
+          "fr_FR": "Se déclenche quand un événement de scène Spline est déclenché."
         }
       }
     ],
@@ -38,23 +55,41 @@
           {
             "id": "uid",
             "name": "UID",
-            "locale_name": { "fr_FR": "UID" },
+            "locale_name": {
+              "fr_FR": "UID"
+            },
             "type": "String",
-            "disabled": true
+            "disabled": true,
+            "description": "Unique identifier of the Spline object to target.",
+            "locale_description": {
+              "fr_FR": "Identifiant unique de l'objet Spline à cibler."
+            }
           },
           {
             "id": "name",
             "name": "Object name",
-            "locale_name": { "fr_FR": "Nom de l'objet" },
+            "locale_name": {
+              "fr_FR": "Nom de l'objet"
+            },
             "type": "String",
-            "disabled": true
+            "disabled": true,
+            "description": "Display name of the Spline object.",
+            "locale_description": {
+              "fr_FR": "Nom d'affichage de l'objet Spline."
+            }
           },
           {
             "id": "event",
             "name": "Event",
-            "locale_name": { "fr_FR": "Event" },
+            "locale_name": {
+              "fr_FR": "Event"
+            },
             "type": "String",
-            "disabled": true
+            "disabled": true,
+            "description": "Spline event type to trigger (mouseDown, mouseUp, mouseHover, etc.).",
+            "locale_description": {
+              "fr_FR": "Type d'événement Spline à déclencher (mouseDown, mouseUp, mouseHover, etc.)."
+            }
           }
         ]
       }
@@ -75,7 +110,6 @@
       }
     }
   },
-
   "properties": [
     {
       "id": "path",
@@ -87,16 +121,23 @@
       "placeholder": "scene.splinecode",
       "value": "scene.splinecode",
       "bindable": true,
-      "required": true
+      "required": true,
+      "description": "URL of the Spline scene to embed.",
+      "locale_description": {
+        "fr_FR": "URL de la scène Spline à intégrer."
+      }
     }
   ],
-
   "events": [
     {
       "id": "sceneLoaded",
       "name": "Scene loaded",
       "locale_name": {
         "fr_FR": "Scène chargée"
+      },
+      "description": "Fires when the Spline scene finishes loading.",
+      "locale_description": {
+        "fr_FR": "Se déclenche quand la scène Spline termine son chargement."
       }
     },
     {
@@ -104,16 +145,23 @@
       "name": "Scene error",
       "locale_name": {
         "fr_FR": "Erreur de scène"
+      },
+      "description": "Fires when the Spline scene fails to load.",
+      "locale_description": {
+        "fr_FR": "Se déclenche quand la scène Spline ne parvient pas à charger."
       }
     }
   ],
-
   "actions": [
     {
       "id": "play",
       "name": "Play",
       "locale_name": {
         "fr_FR": "Lecture"
+      },
+      "description": "Start or resume Spline scene animations.",
+      "locale_description": {
+        "fr_FR": "Démarrer ou reprendre les animations de la scène Spline."
       }
     },
     {
@@ -121,16 +169,23 @@
       "name": "Stop",
       "locale_name": {
         "fr_FR": "Arrêter"
+      },
+      "description": "Stop Spline scene animations.",
+      "locale_description": {
+        "fr_FR": "Arrêter les animations de la scène Spline."
       }
     }
   ],
-
   "synchronization": [
     {
       "id": "first",
       "name": "First",
       "locale_name": {
         "fr_FR": "Première"
+      },
+      "description": "Synchronize first variable with another component.",
+      "locale_description": {
+        "fr_FR": "Synchroniser la première variable avec un autre composant."
       }
     },
     {
@@ -138,6 +193,10 @@
       "name": "Second",
       "locale_name": {
         "fr_FR": "Deuxième"
+      },
+      "description": "Synchronize second variable with another component.",
+      "locale_description": {
+        "fr_FR": "Synchroniser la deuxième variable avec un autre composant."
       }
     },
     {
@@ -145,10 +204,13 @@
       "name": "Third",
       "locale_name": {
         "fr_FR": "Troisième"
+      },
+      "description": "Synchronize third variable with another component.",
+      "locale_description": {
+        "fr_FR": "Synchroniser la troisième variable avec un autre composant."
       }
     }
   ],
-
   "resources": [
     {
       "id": "assets.zip",
@@ -158,7 +220,11 @@
       },
       "type": "Zip",
       "localization": false,
-      "required": true
+      "required": true,
+      "description": "Spline scene assets archive.",
+      "locale_description": {
+        "fr_FR": "Archive des assets de la scène Spline."
+      }
     }
   ]
 }
